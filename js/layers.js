@@ -1,6 +1,6 @@
-addLayer("2d", {
+addLayer("2", {
     name: "Square", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "2d", // This appears on the layer's node. Default is the id with the first letter capitalized
+    symbol: "2", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
@@ -22,13 +22,13 @@ addLayer("2d", {
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "2d", description: "2d: Reset for lines", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "2", description: "2d: Reset for lines", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
 })
-addLayer("3d", {
+addLayer("3", {
     name: "Cube", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "3d", // This appears on the layer's node. Default is the id with the first letter capitalized
+    symbol: "3", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: false,
@@ -50,7 +50,7 @@ addLayer("3d", {
     },
     row: 1, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "3d", description: "3d: Reset for faces", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "3", description: "3d: Reset for faces", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
 })
