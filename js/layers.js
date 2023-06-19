@@ -4,13 +4,13 @@ addLayer("2d", {
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		points: new Decimal(0),
+		lines: new Decimal(0),
     }},
     color: "#4BDC13",
     requires: new Decimal(4), // Can be a function that takes requirement increases into account
-    resource: "lines", // Name of prestige currency
-    baseResource: "points", // Name of resource prestige is based on
-    baseAmount() {return player.points}, // Get the current amount of baseResource
+    resource: "faces", // Name of prestige currency
+    baseResource: "lines", // Name of resource prestige is based on
+    baseAmount() {return player.lines}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
@@ -32,12 +32,12 @@ addLayer("3d", {
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: false,
-		points: new Decimal(0),
+		faces: new Decimal(0),
     }},
     color: "#4BDC13",
-    requires: new Decimal(24), // Can be a function that takes requirement increases into account
-    resource: "faces", // Name of prestige currency
-    baseResource: "points", // Name of resource prestige is based on
+    requires: new Decimal(6), // Can be a function that takes requirement increases into account
+    resource: "cells", // Name of prestige currency
+    baseResource: "faces", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.5, // Prestige currency exponent
