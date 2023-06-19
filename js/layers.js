@@ -1,6 +1,6 @@
 addLayer("2d", {
     name: "Square", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "3", // This appears on the layer's node. Default is the id with the first letter capitalized
+    symbol: "2d", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
@@ -28,7 +28,7 @@ addLayer("2d", {
 })
 addLayer("3d", {
     name: "Cube", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "4", // This appears on the layer's node. Default is the id with the first letter capitalized
+    symbol: "3d", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: false,
